@@ -1,5 +1,5 @@
 package com.abes.enums;
 
-public class UserRole {
-
+public enum UserRole {
+    USER, DRIVER, ADMIN
 }
