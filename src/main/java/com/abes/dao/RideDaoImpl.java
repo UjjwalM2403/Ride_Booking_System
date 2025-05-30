@@ -7,18 +7,18 @@ public class RideDaoImpl implements RideDao {
     private static Map<Long, Ride> rides = new HashMap<>();
     private static Long nextId = 1L;
     
-    @Override
-    public Ride save(Ride ride) {
-        ride.setRideId(nextId++);
-        rides.put(ride.getRideId(), ride);
-        return ride;
-    }
     
     @Override
     public Ride findById(Long id) {
         return rides.get(id);
     }
     
+    @Override
+    public Ride save(Ride ride) {
+    	ride.setRideId(nextId++);
+    	rides.put(ride.getRideId(), ride);
+    	return ride;
+    }
     @Override
     public List<Ride> findByUserId(Long userId) {
         List<Ride> userRides = new ArrayList<>();
