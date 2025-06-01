@@ -58,6 +58,8 @@ public class AdminDaoImpl implements AdminDao {
         return null;
     }
 
+    
+    
     @Override
     public boolean delete(Long id) {
         return admins.remove(id) != null; // Changed from drivers.remove to admins.remove
