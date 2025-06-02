@@ -20,17 +20,6 @@ public class RideServiceImplTest {
         rideService = new RideServiceImpl();
     }
 
-//    @Test
-//    void testRequestRide_Success() throws Exception {
-//        Location pickup = new Location(0.0, 0.0, "A");
-//        Location drop = new Location(1.0, 1.0, "B");
-//        RideRequest request = new RideRequest(1L, 1L, pickup, drop, VehicleType.SEDAN);
-//
-//        ResponseDto response = rideService.requestRide(request);
-//        assertTrue(response.isSuccess());
-//    } // giving error
-
-
     @Test
     void testAcceptRide_InvalidId() {
         assertThrows(RideNotFoundException.class, () -> {
